@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehta Vrushal - Contact form</title>
+    <link rel="shortcut icon" href="https://i.pinimg.com/736x/a7/f2/0b/a7f20bed5d37119561e75b66637e9c1e.jpg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+    </style>
+
+</head>
+<body>
+    <div id="main" class="bg-[#181720] h-[100vh] w-[100vw] flex flex-col items-center justify-center">
+        <a href="index.html"><i class="ri-arrow-left-s-fill text-white text-4xl absolute top-[5%] left-[5%] "></i></a>
+        <p class="text-4xl font-semibold text-white pb-2  md:w-[50%] w-[70%] text-center">Contact Us</p>
+        <p class="text-gray-400 text-sm w-[70%] text-center border-b-[1px] border-gray-500 pb-5">Share your experinces and problems without any hesitation</p>
+        <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-5 text-black w-[100%] items-center p-5">
+
+            <input type="hidden" name="access_key" value="2547aff0-adf9-4156-9e47-7ff91da5964a">
+        
+            <input class="bg-[#22212a] text-white border-[1px] border-[#2d2c31] rounded-[10px] md:w-[40%] w-[80%] p-2" type="text" name="name" placeholder="Enter your name" required>
+            <input class="bg-[#22212a] text-white border-[1px] border-[#2d2c31] rounded-[10px] md:w-[40%] w-[80%] p-2" type="email" name="email" placeholder="Enter your E-mail" required>
+            <textarea class="bg-[#22212a] text-white border-[1px] border-[#2d2c31] rounded-[10px] md:w-[40%] w-[80%] p-2" name="message" placeholder="Enter your message" required></textarea>
+            <button class="bg-[#583ebd] transition-all hover:bg-[#48339a] active:bg-[#362675] text-white border-[1px] border-[#2d2c31] rounded-[10px] p-3" type="submit"> Submit Form </button>
+        
+        </form>
+    </div>
+</body>
+</html>

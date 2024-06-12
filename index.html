@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehta Vrushal | Portfolio - Design with Passion</title>
+    <link rel="shortcut icon" class="rounded-full" href="https://i.pinimg.com/736x/a7/f2/0b/a7f20bed5d37119561e75b66637e9c1e.jpg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body{
+            font-family: "Poppins", sans-serif;
+        }
+        /* The side navigation menu */
+        .sidenav {
+            height: 100%; /* 100% Full-height */
+            width: 0; /* 0 width - change this with JavaScript */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Stay on top */
+            top: 0; /* Stay at the top */
+            left: 0;
+            background-color: #22212a; /* Black*/
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 60px; /* Place content 60px from the top */
+            transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+        }
+
+        /* The navigation menu links */
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        /* Position and style the close button (top right corner) */
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <div id="main" class="main bg-[#181720] h-[100vh] w-[100vw] md:py-8 md:px-[55px] sm:py-6 sm:px-[45px] py-5 px-9 items-center flex flex-col gap-5 items-center">
+        <div id="nav" class="nav h-[9%] w-[100%] bg-[#22212a] rounded-full border border-[#2d2c31] flex items-center justify-between text-white font-medium capitalize md:px-[4%] sm:px-[5%] px-[3%] ">
+            <p class="md:flex sm:flex hidden " > <a class="nav-link"  href="#herosec">home</a></p>
+            <p class="md:flex sm:flex hidden" > <a class="nav-link"  href="#service">service</a></p>
+            <div class="logo">
+                <a href="#herosec">
+                    <img src="https://i.pinimg.com/736x/a7/f2/0b/a7f20bed5d37119561e75b66637e9c1e.jpg" class="h-[40px] cursor-pointer transition-all ease-out border-[#573ebd63] border-[0] hover:border-[5px] rounded-full">
+                </a>
+            </div>
+            <p class="md:flex sm:flex hidden" > <a class="nav-link" href="#portfolio" href="">portfolio</a></p>
+            <p class="md:flex sm:flex hidden" > <a class="nav-link" href="#testimonials" href="">testimonials</a></p>
+
+            <!--side menu-->
+
+            <i class="ri-menu-line text-[32px] flex sm:hidden md:hidden cursor-pointer" onclick="openNav()"></i>
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+            <a  class="closebtn font-medium cursor-pointer" onclick="closeNav()">&times;</a>
+            <a class="nav-link" onclick="closeNav()" href="#herosec">home</a>
+            <a class="nav-link" onclick="closeNav()" href="#service">service</a>
+            <a class="nav-link" onclick="closeNav()" href="#portfolio">portfolio</a>
+            <a class="nav-link" onclick="closeNav()" href="#testimonials">testimonials</a>
+        </div>
+
+        <div id="herosec" class="herosec h-[91%] w-[100%] flex md:flex-row sm:flex-row flex-col">
+            <div class="left top md:h-[100%] md:w-[50%] sm:h-[100%] h-[50%] w-[100%] sm:w-[50%] sm:px-2 flex flex-col justify-center">
+                <div id="txts capitalize">
+                    <p class="font-semibold text-3xl capitalize sm:text-4xl md:text-6xl md:w-[80%] text-white">i'm mehta vrushal, web developer </p>
+                    <p class="capitalize md:text-sm text-xs md:w-[60%] text-gray-300 font-normal py-6  md:hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum cumque quaerat molestiae adipisci non? Quas, deleniti omnis? Adipisci, consectetur ipsa!</p>
+                    <p class="capitalize md:text-sm text-xs md:w-[80%] text-gray-300 font-normal py-6  md:flex sm:hidden hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quisquam soluta velit. Harum, expedita iste praesentium tenetur sapiente quisquam laborum quidem, modi quaerat molestias facilis accusamus maiores non impedit aperiam voluptatem, consectetur.</p>
+                </div>
+                <div id="btns" class="flex gap-3 py-3">
+                    <div id="btn" class="bg-white text-black py-2 px-4 font-semibold rounded-[10px] cursor-pointer"><a href="#portfolio">See Work</a></div>
+                    <div id="btn" class="bg-[#583ebc] text-white py-2 px-4 font-semibold rounded-[10px] cursor-pointer"><a target="_blank" href="https://drive.google.com/file/d/16lAIVxlu4kxO8TqyNr9dN2_zwyHUPF_5/view?usp=drive_link">Download CV</a></div>
+                </div>
+            </div>
+            <div class="right bottom md:h-[100%] md:w-[50%] sm:h-[100%] h-[50%] w-[100%] sm:w-[50%]  flex items-center justify-center">
+                <div id="img" class="md:h-[80%] sm:h-[60%] md:w-[90%] sm:w-[90%] h-[95%] w-[95%] rounded-[40px]  flex items-end justify-end overflow-hidden bg-[url(https://i.pinimg.com/736x/a5/13/d1/a513d19b04cec9f45ee5cc68737397ea.jpg)] bg-cover bg-center">
+                    <img class="md:h-[200px] sm:h-[160px] h-[140px]" src="/Behance - Project/Portfolio - Vrushal/assets/custom_cor_png.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="service" class="md:h-[100vh] sm:h-[100vh] h-[200vh] w-[100vw] bg-[#22212a] py-9 flex flex-col gap-9">
+        <div id="txts" class="md:h-[20%] sm:h-[17%] h-fit md:gap-0 sm:gap-0 gap-3 w-[100%] flex flex-col items-center justify-between">
+            <p class="uppercase md:text-lg sm:text-lg font-semibold text-white ">my expertise</p>
+            <p class="capitalize text-white font-bold md:text-[60px] sm:text-[45px] text-3xl  text-center">innovative solutions</p>
+            <p class="text-gray-300 text-center md:text-sm sm:text-xs text-[11px] md:w-[50%] sm:w-[60%] w-[90%]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae iste earum sunt laborum, nostrum omnis aliquam ipsum, excepturi, eaque explicabo iusto facilis aut voluptates libero in. </p>
+        </div>
+
+        <div id="content" class="md:h-[80%] sm:h-[83%]  h-[90%] w-[100%] grid md:grid-rows-1 md:grid-cols-3 sm:grid-rows-2 sm:grid-cols-2 grid-rows-3 grid-cols-1 p-5 gap-5 ">
+            <div id="service1" class="bg-[url(https://i.pinimg.com/736x/0b/d0/98/0bd098da9554dda41721b08be6c8b91d.jpg)] bg-cover bg-center rounded-[35px] overflow-hidden">
+                <div class="txt md:h-[15%] sm:h-[15%] h-[20%] w-[100%] border-b-2 border-b-[#ffffff50] flex items-center px-5">
+                    <p class="text-2xl md:text-xl text-white tracking-[1px]">Branding</p>
+                </div>
+                <div class="corner md:h-[85%] sm:h-[85%] h-[80%] w-[100%] flex items-end justify-end ">
+                    <img src="/Behance - Project/Portfolio - Vrushal/assets/custom_cor_2_png.png" class="sm:h-[200px] md:h-[160px] h-[140px]">
+                </div>
+            </div>
+            <div id="service2" class="bg-[url(https://i.pinimg.com/474x/e3/60/d6/e360d6d44e0ba807bc0f9cd632fd5726.jpg)] bg-cover bg-center rounded-[35px] overflow-hidden">
+                <div class="txt md:h-[15%] sm:h-[15%] h-[20%] w-[100%] border-b-2 border-b-[#ffffff50] flex items-center px-5">
+                    <p class="text-2xl md:text-xl text-white tracking-[1px]">Mockup</p>
+                </div>
+                <div class="corner md:h-[85%] sm:h-[85%] h-[80%] w-[100%] flex items-end justify-end ">
+                    <img src="/Behance - Project/Portfolio - Vrushal/assets/custom_cor_2_png.png" class="sm:h-[200px] md:h-[160px] h-[140px]">
+                </div>
+            </div>
+            <div id="service3" class="bg-[url(https://i.pinimg.com/474x/1f/ea/06/1fea0699e3d2a75f97fa8bb5cd816e49.jpg)] bg-cover bg-center rounded-[35px] overflow-hidden">
+                <div class="txt md:h-[15%] sm:h-[15%] h-[20%] w-[100%] border-b-2 border-b-[#ffffff50] flex items-center px-5">
+                    <p class="text-2xl md:text-xl text-white tracking-[1px]">Web - Designing</p>
+                </div>
+                <div class="corner md:h-[85%] sm:h-[85%] h-[80%] w-[100%] flex items-end justify-end ">
+                    <img src="/Behance - Project/Portfolio - Vrushal/assets/custom_cor_2_png.png" class="sm:h-[200px] md:h-[160px] h-[140px]">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="portfolio" class="h-[100vh] w-[100vw] bg-[#181720]">
+        <p class="text-white font-bold text-3xl sm:text-4xl md:text-4xl text-center py-7 sm:py-9 md:py-5 h-[10vh] w-[100vw]">Some of my Work</p>
+        <div id="port_cont" class="h-[90vh] w-[100vw] flex justify-center items-center">
+            <div id="mob_grid" class="h-[95%] w-[100%] gap-4 md:hidden sm:hidden flex flex-col px-6">
+                <div  id="click" class="h-[25%] w-[100%] bg-blue-200 cursor-pointer   rounded-[25px] bg-[url(https://i.pinimg.com/736x/d0/8d/cc/d08dccae5a5347c885f817eed5fe46d7.jpg)] bg-cover bg-center"></div>
+                <div class="h-[50%] w-[100%]  flex gap-4">
+                    <div class="h-[100%] w-[50%] gap-4 flex flex-col">
+                        <div id="click" class="h-[40%] w-[100%] bg-blue-200  cursor-pointer  rounded-[25px] bg-[url(https://i.pinimg.com/736x/03/fe/5e/03fe5ee35989317168dbf0660829bea7.jpg)] bg-cover bg-center"></div>
+                        <div id="click" class="h-[60%] w-[100%] bg-blue-200  cursor-pointer  rounded-[25px] bg-[url(https://i.pinimg.com/736x/cb/db/ea/cbdbeaea8381f791b09d6abd9e39972a.jpg)] bg-cover bg-center"></div>
+                    </div>
+                    <div class="h-[100%] w-[50%] gap-4 flex flex-col">
+                        <div id="click" class="h-[40%] w-[100%] bg-blue-200  cursor-pointer  rounded-[25px] bg-[url(https://i.pinimg.com/736x/68/99/31/689931adefdf50810c383285dc8cf488.jpg)] bg-cover bg-center"></div>
+                        <div id="click" class="h-[60%] w-[100%] bg-blue-200  cursor-pointer  rounded-[25px] bg-[url(https://cdn.dribbble.com/userupload/9704555/file/original-1e9cbd4cbcd53fffe2e105a2c72832aa.png?resize=1200x900)] bg-cover bg-center"></div>
+                    </div>
+                </div>
+                <div id="click"  class="h-[25%] w-[100%] bg-blue-200 cursor-pointer   rounded-[25px] bg-[url(https://cdn.dribbble.com/userupload/10745810/file/original-d7761aa13294cf86a10d24b07a680e59.png?resize=1200x900)] bg-cover bg-center"></div>
+            </div>
+            <div id="pc_grid" class="h-[95%] w-[80%] hidden sm:flex md:flex flex gap-5">
+                <div class="col_1 h-[100%] w-[25%]  flex flex-col gap-5">
+                    <div id="click2" class="row_1 h-[33%] w-[100%] bg-blue-200 cursor-pointer   rounded-[25px] bg-[url(https://i.pinimg.com/736x/d0/8d/cc/d08dccae5a5347c885f817eed5fe46d7.jpg)] bg-cover bg-center"></div>
+                    <div id="click2" class="row_2 h-[33%] w-[100%] bg-blue-200 cursor-pointer   rounded-[25px] bg-[url(https://i.pinimg.com/736x/03/fe/5e/03fe5ee35989317168dbf0660829bea7.jpg)] bg-cover bg-center"></div>
+                    <div id="click2" class="row_3 h-[33%] w-[100%] bg-blue-200 cursor-pointer   rounded-[25px] bg-[url(https://i.pinimg.com/736x/cb/db/ea/cbdbeaea8381f791b09d6abd9e39972a.jpg)] bg-cover bg-center"></div>
+                </div>
+                <div class="col_2 h-[100%] w-[75%]  flex flex-col gap-5">
+                    <div id="click2" class="row1 h-[40%] w-[100%] bg-blue-200 cursor-pointer   rounded-[25px] bg-[url(https://cdn.dribbble.com/userupload/9704555/file/original-1e9cbd4cbcd53fffe2e105a2c72832aa.png?resize=1200x900)] bg-cover bg-center"></div>
+                    <div  class="row2 h-[60%] w-[100%]  flex gap-5">
+                        <div class="col_1 h-[100%] w-[60%]  flex flex-col gap-5">
+                            <div id="click2" class="row1 h-[60%] w-[100%] bg-blue-200 cursor-pointer   rounded-[25px] bg-[url(https://i.pinimg.com/736x/68/99/31/689931adefdf50810c383285dc8cf488.jpg)] bg-cover bg-center"></div>
+                            <div id="click2" class="row1 h-[40%] w-[100%] bg-blue-200 cursor-pointer   rounded-[25px] bg-[url(https://cdn.dribbble.com/userupload/10745810/file/original-d7761aa13294cf86a10d24b07a680e59.png?resize=1200x900)] bg-cover bg-center"></div>
+                        </div>
+                        <div class="col_1 h-[100%] w-[40%]  flex flex-col gap-5">
+                            <div  id="click2"  class="row1 h-[40%] w-[100%] bg-blue-200 cursor-pointer   rounded-[25px] bg-[url(https://cdn.dribbble.com/userupload/11780963/file/original-e1137588dcd9baee25727a6a7f2d7ca7.png?resize=1200x900)] bg-cover bg-center"></div>
+                            <div  id="click2"  class="row1 h-[60%] w-[100%] bg-blue-200 cursor-pointer   rounded-[25px] bg-[url(https://cdn.dribbble.com/userupload/12627316/file/original-77973f7d8e5b9ff3ffc4cac9d0d31a51.png?resize=1200x900)] bg-cover bg-center"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gap h-[7vh] bg-[#181720]"></div>
+
+    <div id="testimonials" class="h-[45vh] w-[100vw] bg-[#22212a] flex flex-col items-center ">
+        <div class="text flex flex-col items-center h-[30%] w-[100%] gap-2 justify-center">
+            <p class="text-white text-3xl md:text-3xl font-semibold ">Happy clients say</p>
+            <p class="text-gray-300 text-xs font-medium text-center w-[90%] ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam unde illum nam delectus dignissimos autem!</p>
+        </div>
+        <div class="grid grid-rows-1 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 h-[70%] w-[85%] items-center gap-3 place-self-center">
+            <div id="comment" class="cont bg-[#3e3d4b] md:h-[80%] sm:h-[55%] h-[65%] rounded-[25px] flex flex-col justify-center px-2 gap-2 ">
+                <div class="h-[35px] w-[100%] flex items-center gap-2 ">
+                    <div class="profile h-[35px] w-[35px] bg-red-200 rounded-full bg-[url(https://images.unsplash.com/photo-1497316730643-415fac54a2af?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D)] bg-center bg-cover"></div>
+                    <p class="font-semibold text-white md:text-base sm:text-base text-sm ">Divyam Jain</p>
+                </div>
+                <p class="text-white md:text-xs sm:text-xs text-[8px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quas ratione tempora asperiores rerum illo!</p>
+            </div>
+            <div id="comment" class="cont bg-[#3e3d4b] md:h-[80%] sm:h-[55%] h-[65%] rounded-[25px] flex flex-col justify-center px-2 gap-2 ">
+                <div class="h-[35px] w-[100%] flex items-center gap-2 ">
+                    <div class="profile h-[35px] w-[35px] bg-red-200 rounded-full bg-[url(https://images.unsplash.com/photo-1474447976065-67d23accb1e3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D)] bg-center bg-cover"></div>
+                    <p class="font-semibold text-white md:text-base sm:text-base text-sm ">Poojan Buisness</p>
+                </div>
+                <p class="text-white md:text-xs sm:text-xs text-[8px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quas ratione tempora asperiores rerum illo!</p>
+            </div>
+            <div id="comment" class="cont bg-[#3e3d4b] md:h-[80%] sm:h-[55%] h-[65%] rounded-[25px] flex flex-col justify-center px-2 gap-2 md:flex sm:flex hidden">
+                <div class="h-[35px] w-[100%] flex items-center gap-2 ">
+                    <div class="profile h-[35px] w-[35px] bg-red-200 rounded-full bg-[url(https://plus.unsplash.com/premium_photo-1666866587937-c933156b2168?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D)] bg-center bg-cover"></div>
+                    <p class="font-semibold text-white md:text-base sm:text-base text-sm ">Harsh Vekariya</p>
+                </div>
+                <p class="text-white md:text-xs sm:text-xs text-[8px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quas ratione tempora asperiores rerum illo!</p>
+            </div>
+            <div id="comment" class="cont bg-[#3e3d4b] md:h-[80%] sm:h-[55%] h-[65%] rounded-[25px] flex flex-col justify-center px-2 gap-2 md:flex sm:hidden hidden">
+                <div class="h-[35px] w-[100%] flex items-center gap-2 ">
+                    <div class="profile h-[35px] w-[35px] bg-red-200 rounded-full bg-[url(https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D)] bg-center bg-cover"></div>
+                    <p class="font-semibold text-white md:text-base sm:text-base text-sm ">Patel Keval</p>
+                </div>
+                <p class="text-white md:text-xs sm:text-xs text-[8px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quas ratione tempora asperiores rerum illo!</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="h-[60vh] w-[100vw] bg-[#181720] flex flex-col">
+        <div class="title flex h-[25%] w-[100%] items-center md:px-9 px-3 justify-between border-b-[1px] border-b-gray-500">
+            <p class="text-white font-semibold md:text-3xl sm:text-3xl text-2xl w-[50%] sm:w-[fit] md:w-[fit]">Let's Connect there</p>
+            <a href="contact.html"><p class="text-white font-semibold bg-[#583ebc] py-2 px-4 rounded-[10px]">Contact us</p></a>
+        </div>
+        <div id="content" class="h-[55%] w-[100%] flex items-center border-b-[1px] border-b-gray-500">
+            <div class="col1 h-[100%] md:w-[25%] sm:w-[50%] w-[50%] flex flex-col justify-center gap-3 md:px-9 px-3 ">
+                <div class="logo">
+                    <img src="https://i.pinimg.com/736x/a7/f2/0b/a7f20bed5d37119561e75b66637e9c1e.jpg" class="h-[40px] cursor-pointer transition-all ease-out border-[#573ebd63] border-[0] hover:border-[5px] rounded-full">
+                </div>
+                <p class="text-xs md:text-sm sm:text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit amet, sint iste ea obcaecati facere hic. Nulla, tenetur. </p>
+                <div class="icons cursor-pointer flex gap-3 text-lg">
+                    <i class="hover:text-[#0866ff] transition-all text-white ri-facebook-box-fill"></i>
+                    <i class="hover:text-[#25d366] transition-all text-white ri-whatsapp-fill"></i>
+                    <i class="hover:text-[#ac007b] transition-all text-white ri-instagram-fill"></i>
+                    <i class="hover:text-[#1da1f2] transition-all text-white ri-twitter-fill"></i>
+                    <i class="hover:text-[#ff0000] transition-all text-white ri-youtube-fill"></i>
+                </div>
+            </div>
+            <div class="nav md:flex md:flex-col sm:hidden hidden h-[100%] w-[25%] justify-center items-center text-left text-white">
+                <a href="#"><p class="font-semibold ">Navigation</p></a>
+                <a class="text-gray-300" href="#herosec"><p>Home</p></a>
+                <a class="text-gray-300" href="#service"><p>Service</p></a>
+                <a class="text-gray-300" href="#portfolio"><p>Portfolio</p></a>
+                <a class="text-gray-300" href="#testimonials"><p>Testimonials</p></a>
+            </div>
+            <div class="contact md:flex md:flex-col sm:hidden hidden h-[100%] w-[25%] justify-center items-center text-left text-white">
+                <a href="#"><p class="font-semibold ">Contact</p></a>
+                <a class="text-gray-300" href="#"><p>(+91) 9978616292</p></a>
+                <a class="text-gray-300" href="#"><p>mehtavrushalvm@gmail.com</p></a>
+                <a class="text-gray-300" href="#main"><p>www.MehtaVrushal.com</p></a>
+            </div>
+            <div class="contact h-[100%] md:w-[25%] w-[50%] flex flex-col items-center justify-center">
+                <p class="font-semibold text-white w-fit md:text-base text-xs pb-2 text-center">Get the latest information</p>
+                <input type="email" class="bg-[#4c4c54] md:w-[180px] w-[170px]  p-1 px-3 rounded-[10px] text-xs md:text-sm" placeholder="Email Address">
+            </div>
+        </div>
+        <div id="copyright" class="h-[20%] w-[100%]  flex items-center md:justify-between justify-center md:gap-0 gap-2 text-gray-400 md:px-9 px-3 md:flex-row flex-col md:text-base text-sm">
+            <p>Copyright© 2024 | Designed by <a class="underline" href="https://www.behance.net/nexusgfx" target="_blank">MehtaVrushal.</a></p>
+            <p>Terms & Condition | Privacy & Policy</p>
+        </div>
+    </div>
+
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        /*scrollspy*/
+        document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
+            el.addEventListener('shown.bs.tab', () => {
+                const target = el.getAttribute('data-bs-target')
+                const scrollElem = document.querySelector(`${target} [data-bs-spy="scroll"]`)
+            bootstrap.ScrollSpy.getOrCreateInstance(scrollElem).refresh()
+            })
+        })
+
+        const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+            target: '#navbar-example'
+        })
+    </script>
+
+    <script>
+        function openLinkInNewTab() {
+        // Get all elements with the class "click"
+        const clickDivs = document.querySelectorAll("#click");
+
+        clickDivs.forEach(function(clickDiv) {
+            clickDiv.addEventListener("click", function() {
+            // Replace 'https://www.example.com' with your desired URL
+            window.open("https://www.behance.net/nexusgfx", "_blank");
+            });
+        });
+        }
+
+        // Call the function after the DOM is loaded
+        window.addEventListener("DOMContentLoaded", openLinkInNewTab);
+
+    </script>
+
+    <script>
+        function openLinkInNewTab() {
+        // Get all elements with the class "click"
+        const clickDivs = document.querySelectorAll("#click2");
+
+        clickDivs.forEach(function(clickDiv) {
+            clickDiv.addEventListener("click", function() {
+            // Replace 'https://www.example.com' with your desired URL
+            window.open("https://www.behance.net/nexusgfx", "_blank");
+            });
+        });
+        }
+
+        // Call the function after the DOM is loaded
+        window.addEventListener("DOMContentLoaded", openLinkInNewTab);
+    </script>
+
+</body>
+</html>
